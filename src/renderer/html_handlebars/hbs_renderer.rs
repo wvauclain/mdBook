@@ -270,14 +270,12 @@ impl HtmlHandlebars {
             for (file_name, contents) in theme::fonts::LICENSES.iter() {
                 write_file(destination, file_name, contents)?;
             }
-            for (file_name, contents) in theme::fonts::OPEN_SANS.iter() {
+            for (file_name, contents) in theme::fonts::LIBERTINUS.iter() {
                 write_file(destination, file_name, contents)?;
             }
-            write_file(
-                destination,
-                theme::fonts::SOURCE_CODE_PRO.0,
-                theme::fonts::SOURCE_CODE_PRO.1,
-            )?;
+            for (file_name, contents) in theme::fonts::IOSEVKA.iter() {
+                write_file(destination, file_name, contents)?;
+            }
         }
 
         let playground_config = &html_config.playground;
